@@ -29,4 +29,5 @@ jobs:
 
       - name: Test Flask app
         run: |
+          sleep 5
           curl http://localhost:5000 | grep "hello world"
