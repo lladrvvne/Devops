@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Docker Compose
         run: |
-          docker compose up --build
+          docker compose up --build -d
 
       - name: Test Flask app
         run: |
