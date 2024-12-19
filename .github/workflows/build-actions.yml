@@ -29,8 +29,4 @@ jobs:
 
       - name: Test Flask app
         run: |
-          curl -s -o /dev/null -w "%{http_code}" http://localhost:5000
-          if [ $? -ne 200 ]; then
-            echo "Test failed"
-            exit 1
-          fi
+          curl http://localhost:5000 | grep "hello world"
